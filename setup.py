@@ -40,6 +40,9 @@ setup(
         'console_scripts': [
             'cs_tools = cs_tools.cli:run',
             'cstools = cs_tools.cli:run',
+        ],
+        'markdown.extensions': [
+            'mkdocs-cs_tools = mkdocs_cs_tools:MKTyperExtension'
         ]
     }
 )
