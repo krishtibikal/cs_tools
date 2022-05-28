@@ -26,65 +26,31 @@ provide value to others in your platform.
 
 === "searchable --help"
     ```console
-    (.cs_tools) C:\work\thoughtspot\cs_tools>cs_tools tools searchable --help
-    Usage: cs_tools tools searchable [--help] <command>
-
-      Explore your ThoughtSpot metadata, in ThoughtSpot!
-
-    Options:
-      --version               Show the version and exit.
-      -h, --help, --helpfull  Show this message and exit.
-
-    Commands:
-      bi-server  Extract usage statistics from your ThoughtSpot platform.
-      gather     Extract metadata from your ThoughtSpot platform.
+    :~~: mkdocs-cs_tools
+        :tool: searchable
+        :cd: C:\
+        :indent: 10
     ```
 
 === "searchable gather"
     ```console
-    (.cs_tools) C:\work\thoughtspot\cs_tools>cs_tools tools searchable gather --help
-
-    Usage: cs_tools tools searchable gather --config IDENTIFIER [--option, ..., --help] protocol://DEFINITION.toml
-
-      Extract metadata from your ThoughtSpot platform.
-
-      See the full data model extract at the link below:   https://thoughtspot.github.io/cs_tools/cs-tools/searchable
-
-    Arguments:
-      protocol://DEFINITION.toml  protocol and path for options to pass to the syncer  (required)
-
-    Options:
-      --include-columns       ...
-      --config IDENTIFIER     config file identifier  (required)
-      -h, --help, --helpfull  Show this message and exit.
+    :~~: mkdocs-cs_tools
+        :tool: searchable
+        :command: gather
     ```
 
 === "searchable bi-server"
     ```console
-    (.cs_tools) C:\work\thoughtspot\cs_tools>cs_tools tools searchable bi-server --help
+    :~~: mkdocs-cs_tools
+        :tool: searchable
+        :command: bi-server
+    ```
 
-    Usage: cs_tools tools searchable bi-server --config IDENTIFIER [--option, ..., --help] protocol://DEFINITION.toml
-
-      Extract usage statistics from your ThoughtSpot platform.
-
-      Fields extracted from TS: BI Server
-          - incident id           - timestamp detailed    - url
-          - http response code    - browser type          - client type
-          - client id             - answer book guid      - viz id
-          - user id               - user action           - query text
-          - response size         - latency (us)          - database latency (us)
-          - impressions
-
-    Arguments:
-      protocol://DEFINITION.toml  protocol and path for options to pass to the syncer  (required)
-
-    Options:
-      --from-date YYYY-MM-DD  lower bound of rows to select from TS: BI Server
-      --to-date YYYY-MM-DD    upper bound of rows to select from TS: BI Server
-      --include-today         if set, pull partial day data
-      --compact / --full      if compact, exclude NULL and INVALID user actions  (default: compact)
-      --config IDENTIFIER     config file identifier  (required)
-      -h, --help, --helpfull  Show this message and exit.
+=== "searchable spot-app"
+    ```console
+    :~~: mkdocs-cs_tools
+        :tool: searchable
+        :command: spotapp
     ```
 
 ---
