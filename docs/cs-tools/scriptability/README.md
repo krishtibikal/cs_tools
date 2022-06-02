@@ -1,4 +1,4 @@
-# Searchable Content
+# Scriptability
 
 !!! caution "USE AT YOUR OWN RISK!"
 
