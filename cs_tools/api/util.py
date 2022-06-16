@@ -7,7 +7,7 @@ import uuid
 from cs_tools.util import dedupe
 
 
-def stringified_array(iterable: Iterable) -> str:
+def stringified_array(iterable: Iterable, *, unique: bool = True) -> str:
     """
     Convert an iterable into a string version.
 
@@ -29,7 +29,10 @@ def stringified_array(iterable: Iterable) -> str:
     This function corrects this by simply converting the input into a
     comma-separated string.
     """
-    return '[' + ', '.join(list(dedupe(iterable))) + ']'
+    if unique:
+        iterable = dedupe(iterable)
+
+    return '[' + ','.join(list(iterable)) + ']'
 
 
 def is_valid_guid(to_test: str) -> bool:
