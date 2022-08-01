@@ -1,0 +1,1598 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tools created by the ThoughtSpot PS/CS organization to assist implementation and administration of your platform.">
+      
+      
+      
+        <link rel="canonical" href="https://cs_tools.thoughtspot.com/for-developers/what-is-markdown/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>What is Markdown? - CS Tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Optimo-Plain:300,300i,400,400i,700,700i%7CBB+Roller+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Optimo-Plain";--md-code-font:"BB Roller Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CS Tools" class="md-header__button md-logo" aria-label="CS Tools" data-md-component="logo">
+      
+  <img src="../../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS Tools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What is Markdown?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/thoughtspot/cs_tools" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    thoughtspot/cs_tools
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorial/intro/" class="md-tabs__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cs-tools/overview/" class="md-tabs__link">
+        Tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syncer/what-is/" class="md-tabs__link">
+        Syncers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/1.3.0/" class="md-tabs__link">
+        Changelog
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contributing/" class="md-tabs__link md-tabs__link--active">
+        🤓
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CS Tools" class="md-nav__button md-logo" aria-label="CS Tools" data-md-component="logo">
+      
+  <img src="../../assets/logo_white.png" alt="logo">
+
+    </a>
+    CS Tools
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/thoughtspot/cs_tools" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    thoughtspot/cs_tools
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/install/" class="md-nav__link">
+        Install & Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/config/" class="md-nav__link">
+        Setup a Config File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/archiver/" class="md-nav__link">
+        Run the Archiver tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/syncer/" class="md-nav__link">
+        Using Syncers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/schedule/" class="md-nav__link">
+        Schedule the Archiver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/overview/" class="md-nav__link">
+        Available Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/archiver/" class="md-nav__link">
+        Archiver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/extractor/" class="md-nav__link">
+        Extractor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/rtql/" class="md-nav__link">
+        Remote TQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/rtsload/" class="md-nav__link">
+        Remote tsload
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/security-sharing/" class="md-nav__link">
+        Security Sharing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/user-management/" class="md-nav__link">
+        User Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/bulk-deleter/" class="md-nav__link">
+        Bulk Deleter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/searchable/" class="md-nav__link">
+        Searchable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/scriptability/" class="md-nav__link">
+        🔐 Scriptability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs-tools/sharding-recommender/" class="md-nav__link">
+        🔐 Sharding Recommender
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Syncers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Syncers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Syncers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/what-is/" class="md-nav__link">
+        What's a Syncer?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/protocol/" class="md-nav__link">
+        The Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/falcon/" class="md-nav__link">
+        ThoughtSpot Falcon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/snowflake/" class="md-nav__link">
+        Snowflake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/bigquery/" class="md-nav__link">
+        Google BigQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/gsheets/" class="md-nav__link">
+        Google Sheets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncer/sqlite/" class="md-nav__link">
+        SQLite
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Changelog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Changelog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/1.3.0/" class="md-nav__link">
+        v1.3.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/1.2.0/" class="md-nav__link">
+        v1.2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/1.1.0/" class="md-nav__link">
+        v1.1.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/1.0.0/" class="md-nav__link">
+        v1.0.0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          🤓
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🤓" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          🤓
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environment-setup/" class="md-nav__link">
+        Environment setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-documentation/" class="md-nav__link">
+        Writing documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          What is Markdown?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        What is Markdown?
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learn-markdown" class="md-nav__link">
+    Learn Markdown!
+  </a>
+  
+    <nav class="md-nav" aria-label="Learn Markdown!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#italics-and-bold" class="md-nav__link">
+    Italics and Bold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-extras" class="md-nav__link">
+    Optional Extras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learn-markdown" class="md-nav__link">
+    Learn Markdown!
+  </a>
+  
+    <nav class="md-nav" aria-label="Learn Markdown!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#italics-and-bold" class="md-nav__link">
+    Italics and Bold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-extras" class="md-nav__link">
+    Optional Extras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/thoughtspot/cs_tools/tree/docs/docs/for-developers/what-is-markdown.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<style>
+  /* This is a hack. Don't do this. TOC gets generated by H tags, so we gotta impersonate. */
+  .as-h1 { color: var(--md-default-fg-color--light); font-size: 2em; line-height: 1.3; margin: 0 0 1.25em; }
+  .as-h2 { font-size: 1.5625em; line-height: 1.4; margin: 1.6em 0 .64em; }
+  .as-h3 { font-size: 1.25em; font-weight: 400; letter-spacing: -.01em; line-height: 1.5; margin: 1.6em 0 .8em; }
+  .as-h4 { font-weight: 700; letter-spacing: -.01em; margin: 1em 0; }
+  .as-h5, .as-h6 { color: var(--md-default-fg-color--light); font-size: .8em; font-weight: 700; letter-spacing: -.01em; margin: 1.25em 0; }
+</style>
+
+<h1 id="what-is-markdown">What is <strong>Markdown</strong>?<a class="headerlink" href="#what-is-markdown" title="Permanent link">&para;</a></h1>
+<p><strong>Markdown is a way to write content for the web.</strong></p>
+<p>It's written in what people call "plaintext", which is exactly the sort of text you're used to writing and seeing. Plaintext is just the regular alphabet with a few familiar symbols, like asterisks ( * ) and backticks ( ` ).</p>
+<p>Unlike cumbersome word processing applications, text written in Markdown can be easily shared between computers, mobile phones, and people.</p>
+<p><strong>Formatting text in Markdown has a very gentle learning curve.</strong></p>
+<h2 id="learn-markdown">If you have ten minutes, you can learn Markdown!<a class="headerlink" href="#learn-markdown" title="Permanent link">&para;</a></h2>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In these lessons, you'll notice some <code>formatted monospace text</code>; this text is actually written in Markdown! Regular Markdown doesn't look any different than regular text, but we're providing some highlighting to make it easier to see.</p>
+</div>
+<h3 id="italics-and-bold">Italics and Bold<a class="headerlink" href="#italics-and-bold" title="Permanent link">&para;</a></h3>
+<p>We'll start by learning two basic elements in text formatting: <em>italics</em> and <strong>bold</strong>.</p>
+<p>To make a phrase <em>italic</em> in Markdown, you can surround words with an asterisk (<code>*</code>). For example, <code>*this*</code> word would become <em>italic</em>.</p>
+<p>Similarly, to make phrases <strong>bold</strong> in Markdown, you can surround words with two underscores (<code>__</code>). This will <code>__really__</code> get your point across.</p>
+<p>Of course, you can use <code>*both italics and bold*</code> in the same line. You can also span them <code>__across multiple words__</code>.</p>
+<p>In general, it doesn't matter which order you place the asterisks or underscores. To make the words "This is unbelievable" both bold and italic, like <code>*__"This is unbelievable"__*</code>. We'll place the asterisks <code>*__on the outside__*</code>, just to make it more legible.</p>
+<h3 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h3>
+<p>Let's take a look at another formatting convention: the header. Headers are frequently used on websites, magazine articles, and notices, to draw attention to a section. As their name implies, they act like titles or subtitles above sections.</p>
+<p>There are six types of headers, in decreasing sizes:</p>
+<details class="tldr">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Level 1</label><label for="__tabbed_1_2">Level 2</label><label for="__tabbed_1_3">Level 3</label><label for="__tabbed_1_4">Level 4</label><label for="__tabbed_1_5">Level 5</label><label for="__tabbed_1_6">Level 6</label><label for="__tabbed_1_7">All Levels</label><label for="__tabbed_1_8">Example Code</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="as-h1">This is header one</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h2">This is header two</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h3">This is header three</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h4">This is header four</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h5">This is header five</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h6">This is header six</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="as-h1">This is header one</div>
+<div class="as-h2">This is header two</div>
+<div class="as-h3">This is header three</div>
+<div class="as-h4">This is header four</div>
+<div class="as-h5">This is header five</div>
+<div class="as-h6">This is header six</div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>#This is header one
+##This is header two
+###This is header three
+####This is header four
+#####This is header five
+######This is header six
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<p>To make headers in Markdown, you preface the phrase with a hash mark (<code>#</code>). You place the same number of hash marks as the size of the header you want. For example, for a header one, you'd use one hash mark (<code># Header One</code>), while for a header three, you'd use three (<code>### Header Three</code>).</p>
+<p>It's up to you to decide when it's appropriate to use which header. In general, headers one and six should be used sparingly.</p>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h3>
+<p>We'll now learn how to make links to other web sites on the world wide web.</p>
+<p>There are two different link types in Markdown, but both of them render the exact same way. The first link style is called an <em>inline link</em>. To create an inline link, you wrap the link text in brackets (<code>[ ]</code>), and then you wrap the link in parenthesis (<code>( )</code>). For example, to create a hyperlink to www.github.com, with a link text that says, Visit GitHub!, you'd write this in Markdown: <code>[Visit GitHub!](https://www.github.com)</code>.</p>
+<p>You can add emphasis to link texts, if you like. You'll want to make sure that the bold phrasing occurs within the link text brackets and although it might make for an awkward experience, you can make links within headings, too.</p>
+<p>That's really all there is to writing inline links.</p>
+<p>The other link type is called a reference link. As the name implies, the link is actually a reference to another place in the document.</p>
+<p>Here's an example of what we mean:</p>
+<div class="highlight"><pre><span></span><code>     Here&#39;s [<span class="nt">a link to something else</span>][<span class="nl">another place</span>].
+     Here&#39;s [<span class="nt">yet another link</span>][<span class="nl">another-link</span>].
+     And now back to [<span class="nt">the first link</span>][<span class="nl">another place</span>].
+
+     [<span class="nl">another place</span>]: <span class="na">www.github.com</span>
+     [<span class="nl">another-link</span>]: <span class="na">www.google.com</span>
+</code></pre></div>
+<p>The "references" above are the second set of brackets: <code>[another place]</code> and <code>[another-link]</code>. At the bottom of a Markdown document, these brackets are defined as proper links to outside websites. An advantage of the reference link style is that multiple links to the same place only need to be updated once. For example, if we decide to make all of the <code>[another place]</code> links go somewhere else, we only have to change the single reference link.</p>
+<p>Reference links don't appear in the rendered Markdown. You define them by providing the same tag name wrapped in brackets, followed by a colon, followed by the link.</p>
+<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<p>If you know how to create links in Markdown, you can create images, too. The syntax is nearly the same.</p>
+<p>Images also have two styles, just like links, and both of them render the exact same way. The difference between links and images is that images are prefaced with an exclamation point (<code>!</code>).</p>
+<p>The first image style is called an <em>inline image link</em>. To create an inline image link, enter an exclamation point (<code>!</code>), wrap the alt text in brackets (<code>[ ]</code>), and then wrap the link in parenthesis (<code>( )</code>). (Alt text is a phrase or sentence that describes the image for the visually impaired.)</p>
+<p>For example, to create an inline image link to https://octodex.github.com/images/bannekat.png, with an alt text that says, Benjamin Bannekat, you'd write this in Markdown: <code>![Benjamin Bannekat](https://octodex.github.com/images/bannekat.png)</code>.</p>
+<details class="tldr">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Result</label><label for="__tabbed_2_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Benjamin Bannekat" src="https://octodex.github.com/images/bannekat.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>![<span class="nt">Benjamin Bannekat</span>](<span class="na">https://octodex.github.com/images/bannekat.png</span>)
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<p>Although you don't <em>need</em> to add alt text, it will make your content accessible to your audience, including people who are visually impaired, use screen readers, or do not have high speed internet connections.</p>
+<p>For a reference image, you'll follow the same pattern as a reference link. You'll precede the Markdown with an exclamation point, then provide two brackets for the alt text, and then two more for the image tag, like this: <code>![The founding father][Father]</code> At the bottom of your Markdown page, you'll define an image for the tag, like this: <code>[Father]: http://octodex.github.com/images/founding-father.jpg</code>.</p>
+<p>Ta da! You've learned all there is to adding images in Markdown!</p>
+<h3 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">&para;</a></h3>
+<p>If you need to call special attention to a quote from another source, or design a pull quote for a magazine article, then Markdown's blockquote syntax will be useful. A blockquote is a sentence or paragraph that's been specially formatted to draw attention to the reader. For example:</p>
+<blockquote>
+<p>"The sin of doing nothing is the deadliest of all the seven sins. It has been said that for evil men to accomplish their purpose it is only necessary that good men should do nothing."</p>
+</blockquote>
+<p>To create a block quote, all you have to do is preface a line with the "greater than" caret (<code>&gt;</code>). For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">&gt; </span><span class="ge">In a few moments he was barefoot, his stockings folded in his pockets and his</span>
+  canvas shoes dangling by their knotted laces over his shoulders and, picking a
+  pointed salt-eaten stick out of the jetsam among the rocks, he clambered down
+  the slope of the breakwater.
+</code></pre></div>
+<p>You can also place a caret character on each line of the quote. This is particularly useful if your quote spans multiple paragraphs. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">&gt; </span><span class="ge">His words seemed to have struck some deep chord in his own nature. Had he spoken</span>
+of himself, of himself as he was or wished to be? Stephen watched his face for some
+moments in silence. A cold sadness was there. He had spoken of himself, of his own
+loneliness which he feared.
+<span class="k">&gt;</span>
+<span class="ge">&gt; —Of whom are you speaking? Stephen asked at length.</span>
+<span class="k">&gt;</span>
+<span class="ge">&gt; Cranly did not answer.</span>
+</code></pre></div>
+<p>Notice that even blank lines must contain the caret character. This ensures that the entire blockquote is grouped together.</p>
+<p>Block quotes can contain other Markdown elements, such as italics, images, or links.</p>
+<details class="tldr">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Result</label><label for="__tabbed_3_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<blockquote>
+<p><em>Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts
+of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and
+maintenance are considered. We should forget about small efficiencies, say about 97% of the time: <strong>premature 
+optimization is the root of all evil</strong>. Yet we should not pass up our opportunities in that critical 3%.</em>
+<div class="as-h4"> - Donald Knuth</div></p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">&gt; </span><span class="ge">*Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts</span>
+<span class="k">&gt; </span><span class="ge">of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and</span>
+<span class="k">&gt; </span><span class="ge">maintenance are considered. We should forget about small efficiencies, say about 97% of the time: __premature </span>
+<span class="k">&gt; </span><span class="ge">optimization is the root of all evil__. Yet we should not pass up our opportunities in that critical 3%.*</span>
+<span class="k">&gt; </span><span class="ge">#### - Donald Knuth</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<p>Ta da! You've learned all there is to creating blockquotes in Markdown!</p>
+<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
+<p>There are two types of lists in the known universe: unordered and ordered. That's a fancy way of saying that there are lists with bullet points, and lists with numbers.</p>
+<p>To create an unordered list, you'll want to preface each item in the list with an asterisk (<code>*</code>). Each list item also gets its own line. For example, a grocery list in Markdown might look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Milk
+<span class="k">*</span> Eggs
+<span class="k">*</span> Salmon
+<span class="k">*</span> Butter
+</code></pre></div>
+<p>This Markdown list would render into the following bullet points:</p>
+<ul>
+<li>Milk</li>
+<li>Eggs</li>
+<li>Salmon</li>
+<li>Butter</li>
+</ul>
+<p>Now, let's talk about ordered ones.</p>
+<p>An ordered list is prefaced with numbers, instead of asterisks. Take a look at this recipe:</p>
+<ol>
+<li>Crack three eggs over a bowl</li>
+<li>Pour a gallon of milk into the bowl</li>
+<li>Rub the salmon vigorously with butter</li>
+<li>Drop the salmon into the egg-milk bowl</li>
+</ol>
+<p>To write that in Markdown, you'd do this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Crack three eggs over a bowl
+<span class="k">2.</span> Pour a gallon of milk into the bowl
+<span class="k">3.</span> Rub the salmon vigorously with butter
+<span class="k">4.</span> Drop the salmon into the egg-milk bowl
+</code></pre></div>
+<p>Easy, right? It's just like you'd expect a list to look.</p>
+<p>You can choose to add italics, bold, or links within lists, as you might expect.</p>
+<ul>
+<li>Azalea (<em>Ericaceae Rhododendron</em>)</li>
+<li>Chrysanthemum (<em>Anthemideae Chrysanthemum</em>)</li>
+<li>Dahlia (<em>Coreopsideae Dahlia</em>)</li>
+</ul>
+<p>Occasionally, you might find the need to make a list with more depth, or, to nest one list within another. Have no fear, because the Markdown syntax is exactly the same. All you have to do is to remember to indent each asterisk one space more than the preceding item.</p>
+<p>For example, in the following list, we're going to add some sub-lists to each "main" list item, describing the people in detail:</p>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Tintin
+    <span class="k">*</span> A reporter
+    <span class="k">*</span> Has poofy orange hair
+    <span class="k">*</span> Friends with the world&#39;s most awesome dog
+<span class="k">*</span> Haddock
+    <span class="k">*</span> A sea captain
+    <span class="k">*</span> Has a fantastic beard
+    <span class="k">*</span> Loves whiskey
+        <span class="k">*</span> Possibly also scotch?
+</code></pre></div>
+<p>When rendered, this list turns into the following grouping:</p>
+<ul>
+<li>Tintin<ul>
+<li>A reporter</li>
+<li>Has poofy orange hair</li>
+<li>Friends with the world's most awesome dog</li>
+</ul>
+</li>
+<li>Haddock<ul>
+<li>A sea captain</li>
+<li>Has a fantastic beard</li>
+<li>Loves whiskey<ul>
+<li>Possibly also scotch?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>While you could continue to indent and add sub-lists indefinitely, it's usually a good idea to stop after three levels; otherwise, your text becomes a mess.</p>
+<p>There's one more trick to lists and indentation that we'll explore, and that deals with the case of paragraphs. Suppose you want to create a bullet list that requires some additional context (but not another list). For example, it might look like this:</p>
+<ol>
+<li>
+<p>Crack three eggs over a bowl.</p>
+<p>Now, you're going to want to crack the eggs in such a way that you don't make a mess.</p>
+<p>If you <em>do</em> make a mess, use a towel to clean it up!</p>
+</li>
+<li>
+<p>Pour a gallon of milk into the bowl.</p>
+<p>Basically, take the same guidance as above: don't be messy, but if you are, clean it up!</p>
+</li>
+<li>
+<p>Rub the salmon vigorously with butter.</p>
+<p>By "vigorous," we mean a strictly vertical motion. Julia Child once quipped:</p>
+<blockquote>
+<p>Up and down and all around, that's how butter on salmon goes.</p>
+</blockquote>
+</li>
+<li>
+<p>Drop the salmon into the egg-milk bowl.</p>
+<p>Here are some techniques on salmon-dropping:</p>
+<ul>
+<li>Make sure no trout or children are present</li>
+<li>Use both hands</li>
+<li>Always have a towel nearby in case of messes</li>
+</ul>
+</li>
+</ol>
+<p>To create this sort of text, your paragraph must start on a line all by itself underneath the bullet point, and it must be indented by at least one space. For example, the list above looks like this in Markdown:</p>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Crack three eggs over a bowl.
+
+    Now, you&#39;re going to want to crack the eggs in such a way that you don&#39;t make a mess.
+
+    If you <span class="ge">_do_</span> make a mess, use a towel to clean it up!
+
+<span class="k">2.</span> Pour a gallon of milk into the bowl.
+
+    Basically, take the same guidance as above: don&#39;t be messy, but if you are, clean it up!
+
+<span class="k">3.</span> Rub the salmon vigorously with butter.
+
+    By &quot;vigorous,&quot; we mean a strictly vertical motion. Julia Child once quipped:
+<span class="k">    &gt; </span><span class="ge">Up and down and all around, that&#39;s how butter on salmon goes.</span>
+
+<span class="k">4.</span> Drop the salmon into the egg-milk bowl.
+
+    Here are some techniques on salmon-dropping:
+
+    <span class="k">*</span> Make sure no trout or children are present
+    <span class="k">*</span> Use both hands
+    <span class="k">*</span> Always have a towel nearby in case of messes
+</code></pre></div>
+<p>Notice that the first two items have a single space. This looks a bit odd, so you might want to indent properly to match the characters up (like items three and four). In these paragraphs, you can include all sorts of other Markdown elements, like blockquotes, or even other lists!</p>
+<p>You now know how to make lists in Markdown!</p>
+<h3 id="paragraphs">Paragraphs<a class="headerlink" href="#paragraphs" title="Permanent link">&para;</a></h3>
+<p>Markdown has several ways of formatting paragraphs.</p>
+<p>Let's take a few lines of poetry as an example. Suppose you want to write text that looks like this:</p>
+<blockquote>
+<p>Do I contradict myself?<br />
+Very well then I contradict myself,<br />
+(I am large, I contain multitudes.)</p>
+</blockquote>
+<p>Now, you might think that simply typing each verse onto its own line would be enough to solve the problem:</p>
+<div class="highlight"><pre><span></span><code>Do I contradict myself?
+Very well then I contradict myself,
+(I am large, I contain multitudes.)
+</code></pre></div>
+<p>Unfortunately, you'd be wrong! This Markdown would render simply as a single straight line:</p>
+<blockquote>
+<p>Do I contradict myself? Very well then I contradict myself, (I am large, I contain multitudes.).</p>
+</blockquote>
+<p>If you forcefully insert a new line, you end up breaking the togetherness:</p>
+<div class="highlight"><pre><span></span><code>Do I contradict myself?
+
+Very well then I contradict myself,
+
+(I am large, I contain multitudes.)
+</code></pre></div>
+<p>This is what's known as a <em>hard break</em>; what our poetry asks for is a <em>soft break</em>. You can accomplish this by inserting two spaces <em>after</em> each new line. This is not possible to see, since spaces are invisible, but it'd look something like this:</p>
+<div class="highlight"><pre><span></span><code>Do I contradict myself?··
+Very well then I contradict myself,··
+(I am large, I contain multitudes.)
+</code></pre></div>
+<p>Each dot (<code>·</code>) represents a space on the keyboard.</p>
+<p>Aside from formatting poetry, one of the common uses for these soft breaks is in formatting paragraphs in lists. Recall in the previous lesson that we inserted a new line for multiple paragraphs within a list.</p>
+<p>Et voila! You now know how to make soft breaks in Markdown!</p>
+<h3 id="optional-extras">Optional Extras<a class="headerlink" href="#optional-extras" title="Permanent link">&para;</a></h3>
+<p>You've completed all the lessons!</p>
+<p>Believe it or not, we've only <em>just begun</em> exploring what can be accomplished with Markdown. There are many "extended" implementations of Markdown that support formats like tables, definition lists, footnotes, and more. Because they're non-standard, they're not essential to learning the basics, as we've introduced here.</p>
+<p>See below for even more Markdown-based extensions</p>
+<hr />
+<p><a class="external-link" href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/" target="secondary"><strong>Material for MkDocs Markdown Reference</strong></a>
+<em>Technical documentation that just works. Create a branded static site from a set of Markdown files to host the documentation of your project.</em> We use Material for MkDocs here in the <code>cs_tools</code> project. This allows us to do cool things like the admonishment callouts, footnotes, and content tabs - all in a markdown-esque format.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../writing-documentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Writing documentation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Writing documentation
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 ThoughtSpot Inc. All Rights Reserved
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/thoughtspot/cs_tools" target="_blank" rel="noopener" title="find us on github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:nicholas.cooper@thoughtspot.com" target="_blank" rel="noopener" title="email the team" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../js/konami.js"></script>
+      
+    
+  </body>
+</html>
